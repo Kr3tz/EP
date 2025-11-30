@@ -148,87 +148,61 @@ html, body {
   color:var(--muted);
 }
 
-/* RESPONSIVE */
-@media (max-width:980px) {
-  .card {
-    grid-template-columns:1fr;
-    height:auto;
-  }
-  .right {
-    padding:36px;
-  }
-  .coming {
-    font-size:44px;
-  }
-  .cover {
-    width:120px;
-    height:120px;
-  }
-  .left {
-    padding:24px;
-  }
-.play-box {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.track-preview {
+  margin-top: 20px;
+  background: rgba(0,0,0,0.4);
   padding: 16px;
   border-radius: 16px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.track-row {
   display: flex;
   align-items: center;
-  gap: 16px;
+  padding: 10px 0;
   cursor: pointer;
   transition: 0.25s ease;
-  backdrop-filter: blur(4px);
 }
 
-.play-box:hover {
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateY(-2px);
+.track-row:not(:last-child) {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.play-box-cover {
-  width: 70px;
-  height: 70px;
-  border-radius: 12px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+.track-row:hover {
+  background: rgba(255,255,255,0.05);
 }
 
-.play-box-content {
-  flex: 1;
-}
-
-.play-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.play-sub {
-  font-size: 12px;
-  color: #ccc;
-  margin-top: 2px;
-}
-
-.play-button {
-  width: 48px;
-  height: 48px;
+.track-play {
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background: #e83e3e;
+  border: 1px solid rgba(255,255,255,0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
-  font-weight: 700;
-  color: white;
+  margin-right: 12px;
+  font-size: 13px;
+  color: #fff;
   transition: 0.25s ease;
-  box-shadow: 0 0 12px rgba(232, 62, 62, 0.5);
 }
 
-.play-box:hover .play-button {
-  background: #ff5050;
-  box-shadow: 0 0 18px rgba(255, 80, 80, 0.7);
+.track-row:hover .track-play {
+  background: #e83e3e;
+  border-color: #e83e3e;
+  box-shadow: 0 0 10px rgba(232, 62, 62, 0.6);
+}
+
+.track-title {
+  flex: 1;
+  color: #fff;
+  font-size: 15px;
+}
+
+.track-time {
+  color: #ccc;
+  font-size: 14px;
 }
 
 }
+
